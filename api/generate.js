@@ -1,10 +1,56 @@
 const prompts = {
-  linkedin: `Create a professional LinkedIn post about "[TOPIC]" with the goal "[GOAL]". The post should include a strong hook, 3 practical tips, and a clear call to action. Maximum 180 words, formal but personal tone.`,
-  instagram: `Write an Instagram post about "[TOPIC]" with the goal "[GOAL]". Start with an emotional question, provide 2-3 simple tips, use a friendly tone, max 120 words. Do not include hashtags.`,
-  facebook: `Create a Facebook post about "[TOPIC]" aimed at a casual community. The goal is "[GOAL]". Use a motivating intro, 3 concrete tips, simple language, max 150 words.`,
-  tiktok: `Write a short TikTok script (max 100 words) about "[TOPIC]", goal "[GOAL]". Start with a strong hook, give 3 quick tips, end with a question to the viewers.`,
-  twitter: `Create a Twitter post (max 280 characters) about "[TOPIC]", goal "[GOAL]". Use a catchy hook, 2 tips, and a clear call to action.`,
+  linkedin: `
+    You are Kamrul Islam Maruf, a professional UI/UX designer and founder of Trexa Lab, specializing in conversion-optimized web design for small and medium businesses.
+    Create a LinkedIn post on "[TOPIC]" with the goal "[GOAL]".
+    Randomly choose one of the following post styles:
+    1) Start with a personal or client success story related to the topic.
+    2) Provide a list of 3-5 actionable UI/UX or web design tips.
+    3) Share a bold opinion or myth about web design and invite discussion.
+    Use a confident, professional, yet approachable tone.
+    Include a clear call to action encouraging readers to contact Trexa Lab.
+    Keep the post between 150-180 words.
+  `,
+  
+  instagram: `
+    Write an Instagram post for Kamrul Islam Maruf, founder of Trexa Lab, focusing on "[TOPIC]" with the goal "[GOAL]".
+    Use a friendly and engaging tone.
+    Randomly pick one of these formats:
+    - Start with a relatable question or emotional hook.
+    - Share a quick behind-the-scenes insight or design tip.
+    - Highlight a common problem faced by small businesses with websites.
+    Provide 2-3 practical tips or insights.
+    End with an invitation to DM for design help.
+    Keep the post under 120 words.
+    Do not include hashtags.
+  `,
+  
+  facebook: `
+    Create a Facebook post for Trexa Lab targeting small business owners interested in web design.
+    The topic is "[TOPIC]" with goal "[GOAL]".
+    Randomly select a style:
+    - Motivating introduction with a story.
+    - List of 3 practical and easy-to-implement web design tips.
+    - Question post to engage the community.
+    Use simple, clear language.
+    Include a call to action to contact Trexa Lab for a free consultation.
+    Max 150 words.
+  `,
+  
+  tiktok: `
+    Write a TikTok script (max 100 words) for Kamrul Islam Maruf promoting Trexa Lab on the topic "[TOPIC]" with goal "[GOAL]".
+    Start with a catchy hook about common website problems or design myths.
+    Give 3 quick tips related to UI/UX or conversion optimization.
+    End with a question to encourage viewers to comment or reach out.
+    Use an energetic and approachable tone.
+  `,
+  
+  twitter: `
+    Create a Twitter post (max 280 characters) for Kamrul Islam Maruf, founder of Trexa Lab, about "[TOPIC]" with goal "[GOAL]".
+    Use a catchy hook, 2 concise tips, and a strong call to action.
+    Keep the tone professional but friendly.
+  `,
 };
+
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Only POST requests allowed' });

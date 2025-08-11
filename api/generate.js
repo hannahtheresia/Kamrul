@@ -8,7 +8,7 @@ const prompts = {
     3) Share a bold opinion or myth about web design and invite discussion.
     Use a tone that is confident, friendly, and authentic — similar to your own past LinkedIn posts. Keep sentences short, use simple language, and split text into small paragraphs.
 
-Mention Trexa Lab naturally in the context of your work, without heavy promotion. Avoid fictional stories.
+You can optionally mention Trexa Lab naturally in the context of your work. If you do, do this so slighty and fitting, that it no body would be ever able to guess, that this is promotion. Avoid fictional stories.
 
 End with a thought-provoking question to invite engagement.Be friendly and authentic with a bit of humor.
 

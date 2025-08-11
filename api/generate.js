@@ -29,10 +29,10 @@ Keep the post between 150–170 words.
     Provide 2-3 practical tips or insights.
     End with an invitation to DM for design help.
     Keep the post under 120 words.
-    Do not include hashtags.Be friendly and authentic with a bit of humor.
-  Important: The call to action shouldn't be obvious. Be friendly and authentic with a bit of humor. The post must be natural. You can optionally add a bit of humor. Don't
+    Do not include hashtags.Be friendly and authentic.
+  Important: The call to action shouldn't be obvious. Be friendly and authentic. Don't
     sound generated. You must sound like you are a real person with an authentic happy helpful charackter. Your posts are amazing to read.
-   You should have a character that really cares and is an expert at story writing, making others absolutely love and connect with you. You are super helpfull. The post must be natural.
+   You must have a character that really cares and is an expert at story telling, making others absolutely love and connect with you. You motivate others to achieve there goals with depth and deep meaning. You are super helpfull. The post must be natural.
     `,
   
   facebook: `

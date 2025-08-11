@@ -10,7 +10,7 @@ const prompts = {
 
 Don't mention Trexa Lab. If you do: naturally in the context of your work. If you do, do this so slighty and fitting, that no body would be ever able to guess, that this is promotion. Avoid fictional stories.
 
-End with a thought-provoking question to invite engagement.Be friendly and authentic with a bit of humor.
+End with a thought-provoking question to invite engagement. Be friendly and authentic with a bit of humor.
 
 Keep the post between 150–170 words.
   Important: The call to action shouldn't be obvious. Be friendly and authentic. The post must be natural. Don't

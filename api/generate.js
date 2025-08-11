@@ -6,9 +6,13 @@ const prompts = {
     1) Start with an insightful observation or trend in UI/UX or web design that your audience can relate to.
     2) Provide a list of 3-5 actionable UI/UX or web design tips.
     3) Share a bold opinion or myth about web design and invite discussion.
-    Use a confident, professional, yet approachable tone.
-    Include a clear call to action encouraging readers to contact Trexa Lab. Mention Trexa Lab naturally, without heavy promotion.
-    Keep the post between 150-180 words.
+    Use a tone that is confident, friendly, and authentic — similar to your own past LinkedIn posts. Keep sentences short, use simple language, and split text into small paragraphs.
+
+Mention Trexa Lab naturally in the context of your work, without heavy promotion. Avoid fictional stories.
+
+End with a thought-provoking question to invite engagement.Be friendly and authentic with a bit of humor.
+
+Keep the post between 150–170 words.
   `,
   
   instagram: `
@@ -22,7 +26,7 @@ const prompts = {
     Provide 2-3 practical tips or insights.
     End with an invitation to DM for design help.
     Keep the post under 120 words.
-    Do not include hashtags.
+    Do not include hashtags.Be friendly and authentic with a bit of humor.
   `,
   
   facebook: `
@@ -34,7 +38,7 @@ const prompts = {
     - Question post to engage the community.
     Use simple, clear language.
     Include a call to action to contact Trexa Lab for a free consultation.
-    Max 150 words.
+    Max 150 words. Be friendly and authentic with a bit of humor.
   `,
   
   tiktok: `
@@ -43,14 +47,14 @@ const prompts = {
     Start with a catchy hook about common website problems or design myths.
     Give 3 quick tips related to UI/UX or conversion optimization.
     End with a question to encourage viewers to comment or reach out.
-    Use an energetic and approachable tone.
+    Use an energetic and approachable tone. Be friendly and authentic with a bit of humor.
   `,
   
   twitter: `
   You are Kamrul Islam Maruf, a professional UI/UX designer and founder of Trexa Lab, specializing in conversion-optimized web design for small and medium businesses.
     Create a Twitter post (max 280 characters) for Kamrul Islam Maruf, founder of Trexa Lab{{TOPIC_PART}} with goal "[GOAL]".
-    Use a catchy hook, 2 concise tips, and a strong call to action.
-    Keep the tone professional but friendly.
+    Use a catchy hook, 2 concise tips, and a strong call to action. Be friendly and authentic with a bit of humor.
+   
   `,
 };
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Social Post Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>AI Social Media Post Generator</h1>
+
+    <form id="postForm">
+      <label for="platform">Platform:</label>
+      <select id="platform" required>
+        <option value="">Select platform</option>
+        <option value="linkedin">LinkedIn</option>
+        <option value="instagram">Instagram</option>
+        <option value="facebook">Facebook</option>
+        <option value="tiktok">TikTok</option>
+        <option value="twitter">Twitter</option>
+      </select>
+
+      <label for="topic">Topic:</label>
+      <input type="text" id="topic" placeholder="e.g. AI in marketing, summer fashion trends, healthy eating" required />
+
+      <label for="goal">Goal:</label>
+      <select id="goal" required>
+        <option value="">-- Please select a goal --</option>
+        <option value="more leads">Generate more leads</option>
+        <option value="brand awareness">Increase brand awareness</option>
+        <option value="promote product">Promote a product or service</option>
+        <option value="event promotion">Promote an event</option>
+        <option value="customer retention">Improve customer retention</option>
+        <option value="expert positioning">Establish expert authority</option>
+      </select>
+
+      <button type="submit">Generate Post</button>
+    </form>
+
+    <section id="outputSection" hidden>
+      <h2>Generated Post</h2>
+      <pre id="output"></pre>
+    </section>
+
+    <section id="errorSection" hidden>
+      <h2>Error</h2>
+      <p id="error"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

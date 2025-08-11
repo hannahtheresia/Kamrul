@@ -1,0 +1,144 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #1e1e2f;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+main {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 50px;
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+  max-width: 600px;
+  width: 100%;
+  transition: box-shadow 0.3s ease;
+}
+
+main:hover {
+  box-shadow:
+    0 12px 45px rgba(0, 0, 0, 0.18),
+    0 0 0 1px rgba(255, 255, 255, 0.09);
+}
+
+/* Output Section */
+#outputSection, #errorSection {
+  margin-top: 32px;
+  padding: 24px 28px;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  white-space: pre-wrap;
+  font-family: 'Inter', sans-serif;
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden; /* verhindert horizontalen Scroll */
+  word-break: break-word;
+  background-clip: padding-box; /* für saubere Ecken */
+}
+
+#outputSection {
+  background: #f9faff;
+  color: #202040;
+  border: 1.5px solid #c1c6ff;
+}
+
+#errorSection {
+  background: #ffe7e7;
+  color: #cc0000;
+  border: 1.5px solid #ff9999;
+}
+
+/* Spezifisch für <pre> in outputSection, damit Text richtig umbrechen kann */
+#outputSection pre {
+  white-space: pre-wrap;      /* Zeilenumbruch aktivieren */
+  word-break: break-word;     /* Lange Wörter umbrechen */
+  overflow-wrap: break-word;  /* Backup */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Überschrift */
+h1 {
+  font-weight: 700;
+  font-size: 2.25rem;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #111228;
+  letter-spacing: -0.02em;
+}
+
+/* Formularelemente */
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #3c3c56;
+}
+
+form select,
+form input[type="text"] {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1.8px solid #d0d4e8;
+  background: #fefefe;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.03);
+  transition: border-color 0.3s ease;
+  margin-bottom: 24px;
+  font-weight: 500;
+  color: #33344d;
+}
+
+form select:focus,
+form input[type="text"]:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 8px rgba(102,126,234,0.6);
+  background: #fff;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 4px 12px rgba(102,126,234,0.45);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #5a6dd1 0%, #6a3a95 100%);
+  box-shadow: 0 6px 20px rgba(90,109,209,0.6);
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  main {
+    padding: 30px 25px;
+  }
+}
+
+

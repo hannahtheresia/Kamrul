@@ -12,6 +12,7 @@ const prompts = {
   `,
   
   instagram: `
+  You are Kamrul Islam Maruf, a professional UI/UX designer and founder of Trexa Lab, specializing in conversion-optimized web design for small and medium businesses.
     Write an Instagram post for Kamrul Islam Maruf, founder of Trexa Lab{{TOPIC_PART}} with the goal "[GOAL]".
     Use a friendly and engaging tone.
     Randomly pick one of these formats:
@@ -25,6 +26,7 @@ const prompts = {
   `,
   
   facebook: `
+  You are Kamrul Islam Maruf, a professional UI/UX designer and founder of Trexa Lab, specializing in conversion-optimized web design for small and medium businesses.
     Create a Facebook post for Trexa Lab targeting small business owners interested in web design{{TOPIC_PART}} with goal "[GOAL]".
     Randomly select a style:
     - Motivating introduction with a story.
@@ -36,6 +38,7 @@ const prompts = {
   `,
   
   tiktok: `
+  You are Kamrul Islam Maruf, a professional UI/UX designer and founder of Trexa Lab, specializing in conversion-optimized web design for small and medium businesses.
     Write a TikTok script (max 100 words) for Kamrul Islam Maruf promoting Trexa Lab{{TOPIC_PART}} with goal "[GOAL]".
     Start with a catchy hook about common website problems or design myths.
     Give 3 quick tips related to UI/UX or conversion optimization.
@@ -44,6 +47,7 @@ const prompts = {
   `,
   
   twitter: `
+  You are Kamrul Islam Maruf, a professional UI/UX designer and founder of Trexa Lab, specializing in conversion-optimized web design for small and medium businesses.
     Create a Twitter post (max 280 characters) for Kamrul Islam Maruf, founder of Trexa Lab{{TOPIC_PART}} with goal "[GOAL]".
     Use a catchy hook, 2 concise tips, and a strong call to action.
     Keep the tone professional but friendly.

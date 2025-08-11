@@ -1,7 +1,7 @@
 const prompts = {
   linkedin: `
     You are Kamrul Islam Maruf, a professional UI/UX designer and founder of Trexa Lab, specializing in conversion-optimized web design for small and medium businesses.
-    Create a LinkedIn post on "[TOPIC]" with the goal "[GOAL]".
+    Create a LinkedIn post{{TOPIC_PART}} with the goal "[GOAL]".
     Randomly choose one of the following post styles:
     1) Start with a personal or client success story related to the topic.
     2) Provide a list of 3-5 actionable UI/UX or web design tips.
@@ -12,7 +12,7 @@ const prompts = {
   `,
   
   instagram: `
-    Write an Instagram post for Kamrul Islam Maruf, founder of Trexa Lab, focusing on "[TOPIC]" with the goal "[GOAL]".
+    Write an Instagram post for Kamrul Islam Maruf, founder of Trexa Lab{{TOPIC_PART}} with the goal "[GOAL]".
     Use a friendly and engaging tone.
     Randomly pick one of these formats:
     - Start with a relatable question or emotional hook.
@@ -25,8 +25,7 @@ const prompts = {
   `,
   
   facebook: `
-    Create a Facebook post for Trexa Lab targeting small business owners interested in web design.
-    The topic is "[TOPIC]" with goal "[GOAL]".
+    Create a Facebook post for Trexa Lab targeting small business owners interested in web design{{TOPIC_PART}} with goal "[GOAL]".
     Randomly select a style:
     - Motivating introduction with a story.
     - List of 3 practical and easy-to-implement web design tips.
@@ -37,7 +36,7 @@ const prompts = {
   `,
   
   tiktok: `
-    Write a TikTok script (max 100 words) for Kamrul Islam Maruf promoting Trexa Lab on the topic "[TOPIC]" with goal "[GOAL]".
+    Write a TikTok script (max 100 words) for Kamrul Islam Maruf promoting Trexa Lab{{TOPIC_PART}} with goal "[GOAL]".
     Start with a catchy hook about common website problems or design myths.
     Give 3 quick tips related to UI/UX or conversion optimization.
     End with a question to encourage viewers to comment or reach out.
@@ -45,20 +44,19 @@ const prompts = {
   `,
   
   twitter: `
-    Create a Twitter post (max 280 characters) for Kamrul Islam Maruf, founder of Trexa Lab, about "[TOPIC]" with goal "[GOAL]".
+    Create a Twitter post (max 280 characters) for Kamrul Islam Maruf, founder of Trexa Lab{{TOPIC_PART}} with goal "[GOAL]".
     Use a catchy hook, 2 concise tips, and a strong call to action.
     Keep the tone professional but friendly.
   `,
 };
-
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Only POST requests allowed' });
 
   const { platform, topic, goal } = req.body;
 
-  if (!platform || !topic || !goal) {
-    return res.status(400).json({ error: 'platform, topic and goal are required' });
+  if (!platform || !goal) {
+    return res.status(400).json({ error: 'Platform and goal are required' });
   }
 
   const promptTemplate = prompts[platform.toLowerCase()];
@@ -66,7 +64,11 @@ module.exports = async (req, res) => {
     return res.status(400).json({ error: 'Unsupported platform' });
   }
 
-  const prompt = promptTemplate.replace('[TOPIC]', topic).replace('[GOAL]', goal);
+  // Falls Topic vorhanden → in den Prompt einfügen
+  const topicPart = topic ? ` on "${topic}"` : '';
+  const prompt = promptTemplate
+    .replace('{{TOPIC_PART}}', topicPart)
+    .replace('[GOAL]', goal);
 
   try {
     const openaiRes = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -95,3 +97,4 @@ module.exports = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+

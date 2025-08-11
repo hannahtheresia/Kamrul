@@ -15,8 +15,9 @@ form.addEventListener('submit', async (e) => {
   const topic = document.getElementById('topic').value.trim();
   const goal = document.getElementById('goal').value.trim();
 
-  if (!platform || !topic || !goal) {
-    errorMsg.textContent = 'Please fill in all fields.';
+  // Nur Platform und Goal sind Pflicht
+  if (!platform || !goal) {
+    errorMsg.textContent = 'Please select a platform and goal.';
     errorSection.hidden = false;
     return;
   }
@@ -25,7 +26,7 @@ form.addEventListener('submit', async (e) => {
     const res = await fetch('/api/generate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ platform, topic, goal }),
+      body: JSON.stringify({ platform, topic: topic || null, goal }),
     });
 
     if (!res.ok) {
@@ -41,3 +42,4 @@ form.addEventListener('submit', async (e) => {
     errorSection.hidden = false;
   }
 });
+
